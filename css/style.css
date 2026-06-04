@@ -1,0 +1,230 @@
+/*
+AF - Avaliação Final - Linguagens de Programação
+Tema do Projeto: ShopMax Marketplace
+Aluno 1: Isabelle Silva Ribeiro - RA: 251690
+Aluno 2: Amanda Martins França - RA: 252400
+Professor: Abimael de Oliveira
+Data de entrega: 07/06
+*/
+
+:root {
+    --cor-primaria: #ee4d2d;
+    --cor-secundaria: #222;
+    --cor-clara: #f5f5f5;
+    --cor-branca: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--cor-clara);
+    color: #333;
+    padding-top: 70px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+section {
+    padding: 60px 0;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* =========================
+   TÍTULOS
+========================= */
+
+h1,
+h2,
+h3 {
+    font-weight: bold;
+}
+
+.titulo-gradiente {
+    background: linear-gradient(90deg, #ee4d2d, #ff7a00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* =========================
+   CARROSSEL HOME
+========================= */
+
+.carousel-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.55);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* =========================
+   CARDS E PRODUTOS
+========================= */
+
+.card {
+    border: none;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    animation: aparecer 0.7s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.card-img-top:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+.btn-primary {
+    background-color: var(--cor-primaria);
+    border: none;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+/* =========================
+   FLEXBOX
+========================= */
+
+.area-destaques {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+.form-contato {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================
+   MAPA
+========================= */
+
+iframe {
+    border-radius: 10px;
+    width: 100%;
+}
+
+/* =========================
+   BOTÃO VOLTAR AO TOPO
+========================= */
+
+.btn-topo {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: none;
+    border: none;
+    border-radius: 50%;
+    padding: 12px 16px;
+    cursor: pointer;
+    background: var(--cor-primaria);
+    color: white;
+    font-size: 20px;
+    z-index: 999;
+}
+
+.btn-topo.mostrar {
+    display: block;
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+
+.rodape {
+    background: var(--cor-secundaria);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+/* =========================
+   ANIMAÇÕES
+========================= */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .carousel-item img {
+        height: 250px;
+    }
+
+    .card-img-top {
+        height: 200px;
+    }
+
+    .carousel-caption h2 {
+        font-size: 1.2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+
+}
